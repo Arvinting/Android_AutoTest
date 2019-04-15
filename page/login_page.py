@@ -1,5 +1,5 @@
-from Base.Base import Base
-import Page
+from base.base import Base
+import page
 
 
 class Login_page(Base):
@@ -8,10 +8,10 @@ class Login_page(Base):
         Base.driver = driver
 
     def input_username(self, text):
-        self.input_text(Page.username, text)
+        self.input_text(page.username, text)
 
     def input_password(self, text):
-        self.input_text(Page.password, text)
+        self.input_text(page.password, text)
 
     def click_login_button(self):
-        self.click_element(Page.button_login)
+        self.click_element(page.button_login)

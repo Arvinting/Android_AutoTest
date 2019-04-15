@@ -1,4 +1,4 @@
-from Page.login_page import Login_page
+from page.login_page import Login_page
 
 
 class Page_Obj:
