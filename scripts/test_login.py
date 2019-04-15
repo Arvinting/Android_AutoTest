@@ -2,7 +2,7 @@ import sys, os
 
 sys.path.append(os.getcwd())
 
-import pytest
+import pytest, allure
 import page
 from page.page import Page_Obj
 from base.read_yaml_data import ReadYaml
@@ -24,7 +24,7 @@ class Test_Login:
 
     def teardown_class(self):
         self.driver.quit()
-
+    @allure.step('测试登录')
     @pytest.mark.parametrize("testcase, username, password", get_login_data())
     def test_login(self, testcase, username, password):
         print(testcase)
