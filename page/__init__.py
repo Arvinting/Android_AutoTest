@@ -18,3 +18,5 @@ username = (By.ID, "com.tsingzone.questionbank:id/username")
 password = (By.ID, "com.tsingzone.questionbank:id/password")
 # 登录按钮
 button_login = (By.ID, "com.tsingzone.questionbank:id/button_login")
+# 弹窗确定按钮
+confirm_button = (By.ID, "android:id/button1")

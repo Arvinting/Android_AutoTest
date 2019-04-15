@@ -31,4 +31,5 @@ class Test_Login:
         self.login_obj.input_username(username)
         self.login_obj.input_password(password)
         self.login_obj.click_login_button()
+        self.login_obj.confirm()
 

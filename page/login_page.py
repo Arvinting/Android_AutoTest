@@ -15,3 +15,6 @@ class Login_page(Base):
 
     def click_login_button(self):
         self.click_element(page.button_login)
+
+    def confirm(self):
+        self.click_element(page.confirm_button)
