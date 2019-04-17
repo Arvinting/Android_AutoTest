@@ -1,3 +1,4 @@
+# coding=utf-8
 import page
 from base.base import Base
 

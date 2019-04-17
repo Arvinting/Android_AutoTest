@@ -1,3 +1,4 @@
+# coding=utf-8
 from page.login_page import LoginPage
 from page.question_page import QuestionPage
 
