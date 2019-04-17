@@ -1,3 +1,4 @@
+# coding=utf-8
 import sys
 import os
 
@@ -10,6 +11,10 @@ from base.init_driver import init_driver
 from page.page import PageObj
 from utils.read_yaml_data import ReadYaml
 
+"""
+获取yaml文件中的测试数据
+"""
+
 
 def get_login_data():
     data_list = []
@@ -19,6 +24,11 @@ def get_login_data():
             (i, login_data.get(i).get('flag'), login_data.get(i).get('username'), login_data.get(i).get('password'),
              login_data.get(i).get('message')))
     return data_list
+
+
+"""
+登录流程测试类
+"""
 
 
 class TestLogin(object):
@@ -35,6 +45,7 @@ class TestLogin(object):
     @allure.step('测试登录流程')
     @pytest.mark.parametrize("case, flag, username, password, message", get_login_data())
     def test_login(self, case, flag, username, password, message):
+        # 账号或密码错误
         if flag == 1:
             print(case)
             self.login_obj.input_username(username)
@@ -43,12 +54,14 @@ class TestLogin(object):
             actual = self.login_obj.find_single_element(page.alert_message).text
             self.login_obj.confirm()
             assert actual == message
+        # 账号或密码为空
         if flag == 2:
             print(case)
             self.login_obj.input_username(username)
             self.login_obj.input_password(password)
             actual = self.login_obj.find_single_element(page.button_login).is_enabled()
             assert actual == False
+        # 账号和密码正确
         if flag == 3:
             print(case)
             self.login_obj.input_username(username)

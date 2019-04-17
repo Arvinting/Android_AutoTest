@@ -1,6 +1,10 @@
 import page
 from base.base import Base
 
+"""
+登录页面对象及方法封装
+"""
+
 
 class LoginPage(Base):
 

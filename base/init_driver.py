@@ -1,5 +1,9 @@
 from appium import webdriver
 
+"""
+定义初始化driver方法
+"""
+
 
 def init_driver():
     desired_caps = {}

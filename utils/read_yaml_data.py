@@ -2,6 +2,10 @@ import os
 
 import yaml
 
+"""
+读取yaml中的数据，返回字典格式
+"""
+
 
 class ReadYaml(object):
     yaml.warnings({'YAMLLoadWarning': False})
@@ -14,8 +18,3 @@ class ReadYaml(object):
             yaml_data = yaml.load(f)
             return yaml_data
 
-
-if __name__ == '__main__':
-    rd = ReadYaml("login_data")
-    data = rd.read_data()
-    print(data)
