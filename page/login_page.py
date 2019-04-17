@@ -1,8 +1,8 @@
-from base.base import Base
 import page
+from base.base import Base
 
 
-class Login_page(Base):
+class LoginPage(Base):
 
     def __init__(self, driver):
         Base.driver = driver

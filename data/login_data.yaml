@@ -1,7 +1,21 @@
 login_case01:
+  flag: 1
   username: 16619884070
   password: 111111
+  message: 用户名或密码不正确啊
 
 login_case02:
+  flag: 1
   username: 18233562951
   password: 222222
+  message: 用户名或密码不正确
+login_case03:
+  flag: 2
+  username: 18233562951
+  password: ''
+  message: ''
+login_case04:
+  flag: 3
+  username: 18233562951
+  password: 123456
+  message: ''

@@ -32,3 +32,4 @@ class Base:
         ele = self.find_single_element(loc)
         ele.clear()
         ele.send_keys(text)
+
