@@ -7,6 +7,7 @@ from appium import webdriver
 
 
 def init_driver():
+
     desired_caps = {}
     # 使用平台
     desired_caps['platformName'] = 'Android'

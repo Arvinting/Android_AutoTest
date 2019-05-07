@@ -8,7 +8,7 @@ import pytest
 import allure
 import page
 from base.init_driver import init_driver
-from page.page import PageObj
+from page.pages import PageObj
 from utils.read_yaml_data import ReadYaml
 
 """
